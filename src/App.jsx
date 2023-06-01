@@ -17,7 +17,7 @@ function App() {
   const handleSubmit = (event) => {
       event.preventDefault()
       let trimedString = cliente.nombre.trimStart()
-      if(trimedString.length > 3 && cliente.artista.length > 6) {
+      if(trimedString.length >= 3 && cliente.artista.length >= 6) {
         const clienteAgregado = {...cliente, id: counter}
         setCounter((prevCounter) => prevCounter + 1)
         setClientes((prevClientes) => [...prevClientes, clienteAgregado])
